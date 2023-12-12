@@ -1,3 +1,4 @@
+packages
 *.swp
 *.*~
 project.lock.json
