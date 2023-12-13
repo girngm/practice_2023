@@ -29,14 +29,14 @@ public class ApplicationDbContext : DbContext
 }
 
 // Добавляем классы для новых DbSet
-public class ECN
+public class ECN1
 {
     [Key]
     public int ECNId { get; set; }
     // Добавьте свойства ECN
 }
 
-public class Maker
+public class Maker1
 {
     [Key]
     public int MakerId { get; set; }
@@ -49,14 +49,14 @@ public class Maker
     public string Adress { get; set; }
 }
 
-public class Motor
+public class Motor1
 {
     [Key]
     public int MotorId { get; set; }
     // Добавьте свойства Motor
 }
 
-public class SHVN_Nasos
+public class SHVN_Nasos1
 {
     [Key]
     public int SHVN_NasosId { get; set; }
