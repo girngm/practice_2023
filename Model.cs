@@ -3,6 +3,7 @@ using reader;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 public class ApplicationDbContext : DbContext
 {
@@ -40,6 +41,12 @@ public class Maker
     [Key]
     public int MakerId { get; set; }
     // Добавьте свойства Maker
+    [Column("Code")]
+    public string Code { get; set; }
+    [Column("Name")]
+    public string Name { get; set; }
+    [Column("Adress")]
+    public string Adress { get; set; }
 }
 
 public class Motor
