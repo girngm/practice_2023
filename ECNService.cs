@@ -3,11 +3,11 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using reader;
 
-public class ECNRepository
+public class ECNService
 {
     private readonly ApplicationDbContext _context;
 
-    public ECNRepository(ApplicationDbContext context)
+    public ECNService(ApplicationDbContext context)
     {
         _context = context;
     }
