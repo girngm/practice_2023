@@ -6,12 +6,13 @@ using DocumentFormat.OpenXml.Spreadsheet;
 using System.Linq;
 using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
 using Microsoft.EntityFrameworkCore;
+using DocumentFormat.OpenXml.Vml.Office;
 
 namespace reader
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
             // 11 винда не поддерживает команду
             //Console.BufferHeight = 32766;
@@ -28,6 +29,9 @@ namespace reader
 
             using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Open(filePath, false))
             {
+                var dbContext = new ApplicationDbContext();
+                var ecnService = new ECNService(dbContext);
+
                 WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
                 WorksheetPart worksheetPart = workbookPart.WorksheetParts.First();
 
@@ -57,6 +61,45 @@ namespace reader
 
                 }
             }
+
+            using (var context = new ApplicationDbContext())
+            {
+                if (namefile == "ECN.xlsx" && excelEntities_ECN.Any())
+                {
+                    foreach (var entity in excelEntities_ECN)
+                    {
+                        context.ECNs.Add(entity);
+                    }
+                }
+
+                else if (namefile == "Maker.xlsx" && excelEntities_Maker.Any())
+                {
+                    foreach (var entity in excelEntities_Maker)
+                    {
+                        context.Makers.Add(entity);
+                    }
+                }
+
+                else if (namefile == "Motor.xlsx" && excelEntities_Motor.Any())
+                {
+                    foreach (var entity in excelEntities_Motor)
+                    {
+                        context.Motors.Add(entity);
+                    }
+                }
+
+                else if (namefile == "SHVN_Nasos.xlsx" && excelEntities_SHVN_Nasos.Any())
+                {
+                    foreach (var entity in excelEntities_SHVN_Nasos)
+                    {
+                        context.SHVN_NasosCollection.Add(entity);
+                    }
+                }
+
+                context.SaveChanges();
+            }
+
+            Console.WriteLine("Данные добавлены в базу данных.");
 
             if (namefile == "Maker.xlsx")
             {
