@@ -30,13 +30,6 @@ public class ApplicationDbContext : DbContext
 
 // Добавляем классы для новых DbSet
 
-public class Motor1
-{
-    [Key]
-    public int MotorId { get; set; }
-    // Добавьте свойства Motor
-}
-
 public class SHVN_Nasos1
 {
     [Key]
