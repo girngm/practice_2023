@@ -8,6 +8,10 @@ namespace reader
 {
     public class SHVN_Nasos
     {
+        public SHVN_Nasos()
+        {
+
+        }
         public string Name { get; private set; }
         public string q100 { get; private set; }
         public string H { get; private set; }
