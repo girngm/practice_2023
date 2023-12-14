@@ -36,19 +36,6 @@ public class ECN1
     // Добавьте свойства ECN
 }
 
-public class Maker1
-{
-    [Key]
-    public int MakerId { get; set; }
-    // Добавьте свойства Maker
-    [Column("Code")]
-    public string Code { get; set; }
-    [Column("Name")]
-    public string Name { get; set; }
-    [Column("Adress")]
-    public string Adress { get; set; }
-}
-
 public class Motor1
 {
     [Key]
