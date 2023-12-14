@@ -8,6 +8,10 @@ namespace reader
 {
     public class Maker
     {
+        public Maker()
+        {
+
+        }
         public string Code { get; private set; }
         public string Name { get; private set; }
         public string Adress { get; private set; }
