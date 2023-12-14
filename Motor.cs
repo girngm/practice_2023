@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ namespace reader
         {
 
         }
+        [Key]
+        public int MotorId { get; set; }
         public string TYPE { get; private set; }
         public string U { get; private set; }
         public string N { get; private set; }
