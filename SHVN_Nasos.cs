@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ namespace reader
         {
 
         }
+        [Key]
+        public int SHVN_NasosId { get; set; }
         public string Name { get; private set; }
         public string q100 { get; private set; }
         public string H { get; private set; }
