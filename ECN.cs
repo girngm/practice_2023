@@ -8,6 +8,7 @@ namespace reader
 {
     public class ECN
     {
+        public ECN() { }
         public string ID { get; private set; }
         public string N { get; private set; }
         public string H { get; private set; }
