@@ -8,6 +8,10 @@ namespace reader
 {
     public class Motor
     {
+        public Motor() 
+        {
+
+        }
         public string TYPE { get; private set; }
         public string U { get; private set; }
         public string N { get; private set; }
