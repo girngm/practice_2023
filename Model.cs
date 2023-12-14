@@ -27,12 +27,3 @@ public class ApplicationDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder options)
         => options.UseSqlite($"Data Source={DbPath}");
 }
-
-// Добавляем классы для новых DbSet
-
-public class SHVN_Nasos1
-{
-    [Key]
-    public int SHVN_NasosId { get; set; }
-    // Добавьте свойства SHVN_Nasos
-}
