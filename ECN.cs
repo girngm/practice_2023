@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace reader
     public class ECN
     {
         public ECN() { }
+        [Key]
         public string ID { get; private set; }
         public string N { get; private set; }
         public string H { get; private set; }
