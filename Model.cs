@@ -29,12 +29,6 @@ public class ApplicationDbContext : DbContext
 }
 
 // Добавляем классы для новых DbSet
-public class ECN1
-{
-    [Key]
-    public int ECNId { get; set; }
-    // Добавьте свойства ECN
-}
 
 public class Motor1
 {
