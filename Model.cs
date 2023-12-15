@@ -3,6 +3,7 @@ using reader;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 public class ApplicationDbContext : DbContext
 {
@@ -25,33 +26,4 @@ public class ApplicationDbContext : DbContext
     // special "local" folder for your platform.
     protected override void OnConfiguring(DbContextOptionsBuilder options)
         => options.UseSqlite($"Data Source={DbPath}");
-}
-
-// Добавляем классы для новых DbSet
-public class ECN
-{
-    [Key]
-    public int ECNId { get; set; }
-    // Добавьте свойства ECN
-}
-
-public class Maker
-{
-    [Key]
-    public int MakerId { get; set; }
-    // Добавьте свойства Maker
-}
-
-public class Motor
-{
-    [Key]
-    public int MotorId { get; set; }
-    // Добавьте свойства Motor
-}
-
-public class SHVN_Nasos
-{
-    [Key]
-    public int SHVN_NasosId { get; set; }
-    // Добавьте свойства SHVN_Nasos
 }

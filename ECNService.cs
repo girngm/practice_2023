@@ -1,10 +1,22 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using reader;
 
 public class ECNService
 {
+    [Key]
+    public int ECNId { get; set; }
+
+    [Column("N")]
+    public string N { get; set; }
+    [Column("H")]
+    public string H { get; set; }
+    [Column("L")]
+    public string L { get; set; }
+
     private readonly ApplicationDbContext _context;
 
     public ECNService(ApplicationDbContext context)

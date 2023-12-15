@@ -1,12 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using reader;
+using System.Reflection.Metadata.Ecma335;
 
 public class MakerService
 {
+    [Key]
+    public int MakerId { get; set; }
+    [Column("Code")]
+    public string Code { get; set; }
+    [Column("Name")]
+    public string Name { get; set; }
+    [Column("Adress")]
+    public string Adress { get; set; }
+
+    
+
     private readonly ApplicationDbContext _context;
 
     public MakerService(ApplicationDbContext context)
