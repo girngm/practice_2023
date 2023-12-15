@@ -9,16 +9,16 @@
     <Grid>
         <TabControl>
             <TabItem Header="ЭЦН">
-                <local:ECNView />
+                <local:ECNView DataContext="{Binding ECN}"/>
             </TabItem>
             <TabItem Header="ШВН">
-                <local:SHVNNasosView />
+                <local:SHVNNasosView DataContext="{Binding SHVNNasos}"/>
             </TabItem>
             <TabItem Header="Двигатели">
-                <local:MotorsView />
+                <local:MotorsView DataContext="{Binding Motors}"/>
             </TabItem>
             <TabItem Header="Производители">
-                <local:MakersView />
+                <local:MakersView DataContext="{Binding Makers}"/>
             </TabItem>
         </TabControl>
     </Grid>

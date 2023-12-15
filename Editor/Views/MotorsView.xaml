@@ -7,6 +7,6 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <!--- Принц Михаил Валентинович https://metanit.com/sharp/wpf/5.14.php -->
-        <TextBlock>Принц Михаил Валентинович</TextBlock>
+        <TextBlock Text="{Binding Test}"></TextBlock>
     </Grid>
 </UserControl>
